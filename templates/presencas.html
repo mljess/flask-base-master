@@ -1,0 +1,32 @@
+<!-- templates/mensagem.html -->
+
+{% extends 'base.html' %}
+
+{% block conteudo %}
+
+<form action='/presencas/gravar' method='post'>
+<p>
+  <label for='email'>Insira seu email:</label><br>
+  <input id='email' type='text' name='email'>
+</p><br>
+
+<p>
+  <label for='presente'>Esteve presente?:</label><br>
+  <input id='presente' value='presente' type='radio' name='presente'> Presente </input>
+  <input id='presente' value='ausente'type='radio' name='presente'> Ausente </input>
+</p><br>
+<p> 
+  <label for='resposta'>Insira aqui sua resposta:</label><br>
+  <input id='resposta' type='text' name='resposta'>
+</p>
+
+<p>
+  <label for='comentarios'>Deixe seu comentário:</label><br>
+  <textarea id='comentarios' name='comentarios'></textarea>
+</p>
+<p>
+  <input type='submit' value='Enviar'>
+</p>
+</form>
+
+{% endblock %}

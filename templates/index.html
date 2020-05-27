@@ -1,0 +1,19 @@
+<!-- index.html -->
+{% extends 'base.html' %}
+
+{% block conteudo %}
+
+  {% for pr in presente %}
+  	<p>
+  		<b>{{ pr.email }}: </b>
+  		<b>{{ pr.presenca }}</b>
+  		<b>{{ pr.resposta }} </b>
+  		<b>{{ pr.comentarios }} </b>
+
+  	</p>
+  
+  {% else %}
+    <p>Nenhuma presença</p>
+
+  {% endfor %}
+{% endblock %}
